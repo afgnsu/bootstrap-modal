@@ -2,6 +2,13 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    respond_to do |format|
+      #format.html do
+      #  flash[:warning] = "Template missing"
+      #  redirect_to root_path
+      #end
+      format.js
+    end
   end
 
   def create
@@ -20,8 +27,14 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    respond_to do |format|
+      #format.html do
+      #  flash[:warning] = "Template missing"
+      #  redirect_to root_path
+      #end
+      format.js
+    end
   end
-
 
   def update
     @user = User.find(params[:id])
