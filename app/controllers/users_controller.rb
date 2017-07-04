@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       #  flash[:warning] = "Template missing"
       #  redirect_to root_path
       #end
-      format.js
+      format.js { render template: 'users/modal.js.erb' }
     end
   end
 
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       #  flash[:warning] = "Template missing"
       #  redirect_to root_path
       #end
-      format.js
+      format.js { render template: 'users/modal.js.erb' }
     end
   end
 
